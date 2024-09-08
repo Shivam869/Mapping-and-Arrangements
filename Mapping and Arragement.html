@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8" />
+
+<title>Greetings Master</title>
+
+</head>
+
+<body>
+     <p id="product_value"></p>
+     <button onclick="ascending()">Ascending</button>
+     <button onclick="descending()">descending</button>
+      <script>
+       var number=[29,12,56,1900,1562];
+       function myfunction(num) {
+        return num * 10;
+       }
+      
+       function ascending() {
+        number.sort( function (a,b) {return a-b});
+        var newarray = number.map(myfunction);
+       document.getElementById("product_value") .innerHTML= "ascending order " + newarray;
+       }
+       
+       function descending() {
+        number.sort( function (a,b) {return b-a});
+        var newarray = number.map(myfunction);
+       document.getElementById("product_value") .innerHTML= "descending order " + newarray;
+       }
+      </script>
+
+</body>
